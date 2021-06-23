@@ -3,7 +3,7 @@
 </p>
   
 <h1 align="center">
-  Project Name
+  RecipesRD
 </h1>
 
 <h4 align="center">
