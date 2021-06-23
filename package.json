@@ -1,0 +1,20 @@
+{
+  "name": "app_name_here",
+  "version": "1.0.0",
+  "description": "PUT THE PROJECT DESCRIPTION HERE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisvinicius09/repo-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "REMEBER TO PUT THE ISSUES PAGE RIGHT HERE"
+  },
+  "homepage": "GITHUB PAGE OR URL OF THE PROJECT HERE"
+}
