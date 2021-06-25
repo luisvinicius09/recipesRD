@@ -1,21 +1,21 @@
-function App() {
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+
+const App = () => {
+  // const [tempState, setTempState] = useState({})
+
+  // useEffect(async () => {
+  //     const result = await axios.get('https://api.spoonacular.com/recipes/complexSearch');
+
+  //     setTempState(result);
+  // })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello to the real world</h1>
+      {/* {tempState} */}
     </div>
   );
-}
+};
 
 export default App;
