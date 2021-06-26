@@ -1,25 +1,31 @@
-const dataReducer = (state = [], action) => {
+const initialState = {
+  items: [],
+  loading: false,
+  error: null,
+}
+
+const dataReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
       return {
-        items: [],
+        ...state,
         loading: true,
         error: null,
       };
     case 'FETCH_SUCCESS':
       return {
-        error: null,
+        ...state,
         loading: false,
-        items: state
+        items: action.payload
       };
     case 'FETCH_ERROR':
       return {
+        ...state,
         loading: false,
-        items: [],
         error: action.error
       };
     default:
-      return state
+      return state;
   }
 }
 
