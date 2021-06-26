@@ -1,19 +1,27 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../state/actions';
 
 const App = () => {
-  // const [tempState, setTempState] = useState({})
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
 
-  // useEffect(async () => {
-  //     const result = await axios.get('https://api.spoonacular.com/recipes/complexSearch');
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+  console.log(state.data.items[0])
 
-  //     setTempState(result);
-  // })
+  const renderRecipes = () => {
+    if (state.loading) {
+      return <h2>Loading</h2>;
+    }
+    return state.data.items.map((recipe) => recipe.title);
+  }
 
   return (
     <div>
       <h1>Hello to the real world</h1>
-      {/* {tempState} */}
+      { renderRecipes() }
     </div>
   );
 };
