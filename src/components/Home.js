@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCategories } from '../state/actions';
-import CategoryCard from './CategoryCard';
-import NavBar from './NavBar';
-import SearchBar from './SearchBar';
+import CategoryCard from './category/CategoryCard';
+import NavBar from './utils/NavBar';
+import SearchBar from './search/SearchBar';
 
 const Home = () => {
   const dispatch = useDispatch();

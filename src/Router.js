@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import App from './components/App';
-import NoMatch from './components/NoMatch';
-import CategoryMeals from './components/CategoryMeals';
-import Meal from './components/Meal';
+import NoMatch from './components/utils/NoMatch';
+import CategoryMeals from './components/category/CategoryMeals';
+import Meal from './components/meal/Meal';
 
 const Routes = () => (
   <BrowserRouter>

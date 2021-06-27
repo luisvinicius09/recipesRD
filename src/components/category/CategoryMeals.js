@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
-import { fetchMealsByCategory } from '../state/actions';
-import MealCard from './MealCard';
-import NavBar from './NavBar'
+import { fetchMealsByCategory } from '../../state/actions';
+import MealCard from '../meal/MealCard';
+import NavBar from '../utils/NavBar'
 
 const CategoryMeals = () => {
   const dispatch = useDispatch();
