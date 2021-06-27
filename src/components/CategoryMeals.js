@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { fetchMealsByCategory } from '../state/actions';
 import MealCard from './MealCard';
+import NavBar from './NavBar'
 
 const CategoryMeals = () => {
   const dispatch = useDispatch();
@@ -10,7 +11,7 @@ const CategoryMeals = () => {
   const state = useSelector((state) => state)
 
   useEffect(() => {
-    dispatch(fetchMealsByCategory(category))
+     (fetchMealsByCategory(category))
   }, [dispatch, category]);
   
   console.log(state.data.items)
@@ -24,6 +25,7 @@ const CategoryMeals = () => {
 
   return (
     <>
+      <NavBar />
       <h1>Category meals of { category }</h1>
       <p>{ renderMeals() }</p>
     </>
