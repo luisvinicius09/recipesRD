@@ -18,7 +18,7 @@ const CategoryMeals = () => {
     if (state.loading) {
       return <h1>Loading...</h1>
     }
-    return state.data.items.map((meal) => <MealCard key={meal.strMeal} id={meal.idMeal} meal={meal.strMeal} image={meal.strMealThumb}/>)
+    return state.data.items.map((meal) => <MealCard key={meal.idMeal} id={meal.idMeal} meal={meal.strMeal} image={meal.strMealThumb}/>)
   }
 
   return (
