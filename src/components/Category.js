@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Category = ({ category, image, amount }) => (
   <>
-    <Link to={category}>
+    <Link to={"/home/" + category}>
       <img src={ image } alt={ category }/>
       <div>
         <p>{ category }</p>
