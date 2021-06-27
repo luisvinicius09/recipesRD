@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Category = ({ category, image, amount }) => (
+const CategoryCard = ({ category, image, amount }) => (
   <>
     <Link to={"/home/" + category}>
       <img src={ image } alt={ category }/>
@@ -12,4 +12,4 @@ const Category = ({ category, image, amount }) => (
   </>
 );
 
-export default Category;
+export default CategoryCard;
