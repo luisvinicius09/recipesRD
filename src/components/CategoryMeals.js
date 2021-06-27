@@ -11,23 +11,21 @@ const CategoryMeals = () => {
   const state = useSelector((state) => state)
 
   useEffect(() => {
-     (fetchMealsByCategory(category))
+    dispatch(fetchMealsByCategory(category))
   }, [dispatch, category]);
   
-  console.log(state.data.items)
-
   const renderMeals = () => {
     if (state.loading) {
       return <h1>Loading...</h1>
     }
-    return state.data.items.map((meal) => <MealCard id={meal.idMeal} meal={meal.strMeal} image={meal.strMealThumb}/>)
+    return state.data.items.map((meal) => <MealCard key={meal.strMeal} id={meal.idMeal} meal={meal.strMeal} image={meal.strMealThumb}/>)
   }
 
   return (
     <>
       <NavBar />
       <h1>Category meals of { category }</h1>
-      <p>{ renderMeals() }</p>
+      { renderMeals() }
     </>
   )
 };
