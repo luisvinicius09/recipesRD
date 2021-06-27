@@ -9,13 +9,12 @@ const App = () => {
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
-  console.log(state.data.items[0])
 
   const renderRecipes = () => {
     if (state.loading) {
-      return <h2>Loading</h2>;
+      return <h2>Loading...</h2>;
     }
-    return state.data.items.map((recipe) => recipe.title);
+    return state.data.items.map((recipe) => recipe.strCategory);
   }
 
   return (
