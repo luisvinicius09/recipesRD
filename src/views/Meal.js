@@ -13,9 +13,9 @@ const Meal = () => {
     dispatch(fetchMealById(id))
   }, [dispatch, id]);
 
-  const meal = state.data.items[0];
+  const meal = state.data.meal[0];
 
-  if (!state.data.items[0]) {
+  if (!state.data.meal[0]) {
     return <h1>Loading...</h1>;
   }
 

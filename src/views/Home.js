@@ -18,7 +18,7 @@ const Home = () => {
     if (state.loading) {
       return <h2>Loading...</h2>;
     }
-    return state.data.items.map((cat) => <CategoryCard key={cat.idCategory} category={cat.strCategory} image={cat.strCategoryThumb} amount='1' />);
+    return state.data.categories.map((cat) => <CategoryCard key={cat.idCategory} category={cat.strCategory} image={cat.strCategoryThumb} amount='1' />);
   }
 
   return (

@@ -19,10 +19,10 @@ const SearchResults = (props) => {
     if (state.loading) {
       return <h1>Loading...</h1>
     }
-    if (!state.data.items) {
+    if (!state.data.results) {
       return <h1>No items to display</h1>
     }
-    return state.data.items.map((meal) => <MealCard key={meal.idMeal} id={meal.idMeal} meal={meal.strMeal} image={meal.strMealThumb}/>)
+    return state.data.results.map((meal) => <MealCard key={meal.idMeal} id={meal.idMeal} meal={meal.strMeal} image={meal.strMealThumb}/>)
   };
 
   return (
