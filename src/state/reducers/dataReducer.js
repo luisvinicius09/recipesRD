@@ -1,5 +1,8 @@
 const initialState = {
-  items: [],
+  categories: [],
+  meals: [],
+  meal: [],
+  results: [],
   loading: false,
   error: null,
 }
@@ -12,11 +15,29 @@ const dataReducer = (state = initialState, action) => {
         loading: true,
         error: null,
       };
-    case 'FETCH_SUCCESS':
+    case 'FETCH_CATEGORIES_SUCCESS':
       return {
         ...state,
         loading: false,
-        items: action.payload
+        categories: action.payload,
+      };
+    case 'FETCH_MEALS_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        meals: action.payload,
+      }
+    case 'FETCH_MEAL_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        meal: action.payload,
+      };
+    case 'FETCH_SEARCH_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        results: action.payload,
       };
     case 'FETCH_ERROR':
       return {
