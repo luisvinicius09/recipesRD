@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { fetchMealsByCategory } from '../../state/actions';
 import MealCard from '../meal/MealCard';
 import NavBar from '../utils/NavBar'
+import SearchBar from '../search/SearchBar';
 
 const CategoryMeals = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const CategoryMeals = () => {
   return (
     <>
       <NavBar />
+      <SearchBar />
       <h1>Category meals of { category }</h1>
       { renderMeals() }
     </>
