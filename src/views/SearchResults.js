@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMealsBySearch } from '../../state/actions';
-import NavBar from '../utils/NavBar';
-import SearchBar from '../search/SearchBar';
-import MealCard from '../meal/MealCard';
+import { fetchMealsBySearch } from '../state/actions';
+import NavBar from '../components/utils/NavBar';
+import SearchBar from '../components/search/SearchBar';
+import MealCard from '../components/meal/MealCard';
 
 const SearchResults = (props) => {
   const dispatch = useDispatch();

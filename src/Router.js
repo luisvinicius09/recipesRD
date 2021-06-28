@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import App from './components/App';
-import NoMatch from './components/utils/NoMatch';
-import CategoryMeals from './components/category/CategoryMeals';
-import Meal from './components/meal/Meal';
-import SearchResults from './components/search/SearchResults';
+import App from './views/App';
+import NoMatch from './views/NoMatch';
+import CategoryMeals from './views/CategoryMeals';
+import Meal from './views/Meal';
+import SearchResults from './views/SearchResults';
 
 const Routes = () => (
   <BrowserRouter>
