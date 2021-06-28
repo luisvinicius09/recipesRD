@@ -42,7 +42,7 @@ export const fetchMealsBySearch = (query) => async (dispatch, getState) => {
   try {
     const res = await axios.get(`https://themealdb.com/api/json/v1/1/search.php?s=${query}`);
 
-    dispatch({ type: 'FETCH_SUCESS', payload: res.data.meals });
+    dispatch({ type: 'FETCH_SUCCESS', payload: res.data.meals });
   } catch (error) {
     dispatch({ type: 'FETCH_ERROR', error });
   }
