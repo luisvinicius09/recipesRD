@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCategories, fetchFilterOptions } from '../state/actions';
+import { fetchCategories } from '../state/actions';
 import CategoryCard from '../components/category/CategoryCard';
 import NavBar from '../components/utils/NavBar';
 import SearchBar from '../components/search/SearchBar';
@@ -12,7 +12,6 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchCategories());
-    dispatch(fetchFilterOptions());
   }, [dispatch]);
 
   const renderCategories = () => {
