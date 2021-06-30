@@ -47,3 +47,24 @@ export const fetchMealsBySearch = (query) => async (dispatch, getState) => {
     dispatch({ type: 'FETCH_ERROR', error });
   }
 }
+
+export const fetchFilterOptions = () => async (dispatch, getState) => {
+  dispatch({ type: 'FETCH REQUEST' });
+  try {
+    const res = await axios.get(`https://themealdb.com/api/json/v1/1/list.php?i=list`);
+
+    dispatch({ type: 'FETCH_FILTER_SUCCESS', payload: res.data.meals });
+  } catch (error) {
+    dispatch({ type: 'FETCH_ERROR', error });
+  }
+}
+
+export const setFilteredOptions = (value) => ({
+  type: 'SET_FILTER',
+  value
+});
+
+export const setFilter = (value) => ({
+  type: 'SET_CHECKED_FILTER',
+  value
+})
