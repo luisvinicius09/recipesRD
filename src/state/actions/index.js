@@ -84,3 +84,8 @@ export const setSearch = (value) => ({
   type: 'SET_SEARCH_VALUE',
   value,
 });
+
+export const handleModal = (boolean) => ({
+  type: 'HANDLE_MODAL',
+  boolean,
+})
