@@ -79,3 +79,8 @@ export const setFilter = (value) => ({
   type: 'SET_CHECKED_FILTER',
   value
 })
+
+export const setSearch = (value) => ({
+  type: 'SET_SEARCH_VALUE',
+  value,
+});

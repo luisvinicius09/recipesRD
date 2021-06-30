@@ -1,18 +1,31 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import styles from '../../assets/css/Searchbar.module.css';
+import RightArrow from '../../assets/img/right-arrow.png';
+import { setSearch } from '../../state/actions';
 
 const SearchBar = () => {
-  const [inputValue, setInputValue] = useState("")
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
+
   const handleInputChange = (e) => {
-    setInputValue(e.target.value)
+    dispatch(setSearch(e.target.value));
   };
 
+  const handleSubmit = (e) => {
+    console.log('working');
+  }
+
+  const { value } = state.search;
+
   return (
-    <>
-      <br /><input onChange={ handleInputChange }/>
-      <Link to={{ pathname: "/search/results", inputValue }}>Submit</Link>
+    <div className={styles.container}>
+      <input className={styles.searchInput} onChange={ handleInputChange } onKeyDown={(e) => handleSubmit(e)}/>
+      <Link to={{ pathname: "/search/results", inputValue: value }} className={styles.submitButton}>
+        <img src={RightArrow} alt="Submit"/>
+      </Link>
       <br />
-    </>
+    </div>
   );
 };
 

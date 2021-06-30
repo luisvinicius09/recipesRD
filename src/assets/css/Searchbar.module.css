@@ -1,0 +1,34 @@
+:root {
+  --red:#E63946; /* 230, 57, 70 */
+  --cream: #F1FAEE; /* 241, 250, 238 */
+  --light-blue: #A8DADC; /* 168, 218, 220 */
+  --blue: #457B9D; /* 69, 123, 157 */
+  --dark-blue: #1D3557; /* 69, 123, 157 */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.searchInput {
+  width: 80%;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  padding-left: 8px;
+}
+
+.searchInput:active,
+.searchInput:focus {
+  border: 2px solid var(--blue);
+  outline: none;
+}
+
+.submitButton img {
+  width: 25px;
+  height: auto;
+  padding-top: 4px;
+}

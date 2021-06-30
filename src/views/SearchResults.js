@@ -13,8 +13,6 @@ const SearchResults = (props) => {
     dispatch(fetchMealsBySearch(props.location.inputValue));
   }, [dispatch, props.location.inputValue]);
 
-  console.log(state.data.items);
-
   const renderMeals = () => {
     if (state.loading) {
       return <h1>Loading...</h1>
