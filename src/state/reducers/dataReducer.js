@@ -3,6 +3,7 @@ const initialState = {
   meals: [],
   meal: [],
   results: [],
+  filterOptions: [],
   loading: false,
   error: null,
 }
@@ -39,6 +40,12 @@ const dataReducer = (state = initialState, action) => {
         loading: false,
         results: action.payload,
       };
+    case 'FETCH_FILTER_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        filterOptions: action.payload,
+      }
     case 'FETCH_ERROR':
       return {
         ...state,
