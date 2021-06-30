@@ -1,0 +1,51 @@
+:root {
+  --red:#E63946; /* 230, 57, 70 */
+  --cream: #F1FAEE; /* 241, 250, 238 */
+  --light-blue: #A8DADC; /* 168, 218, 220 */
+  --blue: #457B9D; /* 69, 123, 157 */
+  --dark-blue: #1D3557; /* 69, 123, 157 */
+}
+
+.container {
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+.engineBtn {
+  background: none;
+  border: none;
+}
+
+.engineBtn:hover {
+  cursor: pointer;
+}
+
+.displaySearch {
+  background: none;
+  border: none;
+}
+
+.displaySearch img,
+.engineBtn img {
+  width: 25px;
+  height: auto;
+}
+
+.displaySearch:hover {
+  cursor: pointer;
+}
+
+.hiddenDiv {
+  visibility: hidden;
+  width: 20px;
+  height: auto;
+}

@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <>
-      <NavBar />
+      <NavBar displaySearch={true}/>
       <SearchBar />
       <Filter />
       { renderCategories() }
