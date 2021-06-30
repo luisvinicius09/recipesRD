@@ -1,11 +1,16 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setFilter, setFilteredOptions } from '../../state/actions';
+import { fetchFilterOptions, setFilter, setFilteredOptions } from '../../state/actions';
 import Input from './Input';
 
 const Filter = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
+
+  useEffect(() => {
+    dispatch(fetchFilterOptions());
+  })
 
   const handleInput = (e) => {
     dispatch(setFilteredOptions(e.target.value))
