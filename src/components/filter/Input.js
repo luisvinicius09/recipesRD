@@ -1,6 +1,11 @@
+import styles from '../../assets/css/Input.module.css'
+
 const Input = ({ ingredient }) => (
   <>
-    <input type="radio" name="filter" value={ingredient}/>{ingredient}
+    <label className={styles.container}>{ingredient}
+      <input type="radio" name="filter" value={ingredient}/>
+      <span className={styles.checkmark}></span>
+    </label>
   </>
 );
 

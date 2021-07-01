@@ -1,0 +1,38 @@
+:root {
+  --red:#E63946; /* 230, 57, 70 */
+  --cream: #F1FAEE; /* 241, 250, 238 */
+  --light-blue: #A8DADC; /* 168, 218, 220 */
+  --blue: #457B9D; /* 69, 123, 157 */
+  --dark-blue: #1D3557; /* 69, 123, 157 */
+}
+
+.container {
+  border: 1px solid black;
+  /* display: block; */
+  /* position: relative; */
+  /* padding-left: 35px; */
+  /* margin-bottom: 12px; */
+  /* cursor: pointer; */
+  font-size: 22px;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+  color: yellow;
+}
+
