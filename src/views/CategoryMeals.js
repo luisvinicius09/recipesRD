@@ -26,7 +26,6 @@ const CategoryMeals = () => {
     <>
       <NavBar />
       <SearchBar />
-      <h1>Category meals of { category }</h1>
       { renderMeals() }
     </>
   )

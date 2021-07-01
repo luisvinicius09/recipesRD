@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.container img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.container a {
+  text-decoration: none;
+  position: relative;
+}
+
+.container p {
+  font-family: 'Roboto';
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.bgText {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(69, 123, 157, 0.8);
+  margin-bottom: 10px;
+}

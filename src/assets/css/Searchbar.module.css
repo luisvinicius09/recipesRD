@@ -11,6 +11,7 @@
   align-items: center;
   position: relative;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .searchInput {
