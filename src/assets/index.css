@@ -19,3 +19,7 @@ code {
 body {
   background-color: var(--cream);
 }
+
+#root{
+  height: 100%;
+}

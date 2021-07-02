@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  margin-top: 10px;
+  height: calc(100% - (66px));
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  bottom: -520px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px 10px 0 0;
+}
+
+.overlayBtns {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.overlayBtns button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.overlayBtns button:focus {
+  outline: none;
+  border: none;
+}
