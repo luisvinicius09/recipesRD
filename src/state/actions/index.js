@@ -1,12 +1,9 @@
 import axios from 'axios';
 
-// const API_KEY = '8cdc318e14cb4e0e9cefc312cb97d7a2';
-
 export const fetchCategories = () => async (dispatch, getState) => {
   dispatch({ type: 'FETCH_REQUEST' });
 
   try {
-    // const res = await axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}`);
     const res = await axios.get('https://themealdb.com/api/json/v1/1/categories.php');
 
     dispatch({type: 'FETCH_CATEGORIES_SUCCESS', payload: res.data.categories });
@@ -88,4 +85,16 @@ export const setSearch = (value) => ({
 export const handleModal = (boolean) => ({
   type: 'HANDLE_MODAL',
   boolean,
+})
+
+export const handleDetails = () => ({
+  type: 'HANDLE_DETAILS',
+});
+
+export const handleIngredients = () => ({
+  type: 'HANDLE_INGREDIENTS',
+});
+
+export const handleRecipes = () => ({
+  type: 'HANDLE_RECIPES'
 })
