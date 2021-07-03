@@ -11,13 +11,13 @@
 
 .container img {
   position: relative;
-  width: 320px;
+  width: 100%;
   height: auto;
 }
 
 .container a {
   position: relative;
-  width: inherit;
+  width: 100%;
 }
 
 .description {
