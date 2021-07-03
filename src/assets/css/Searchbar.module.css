@@ -1,11 +1,3 @@
-:root {
-  --red:#E63946; /* 230, 57, 70 */
-  --cream: #F1FAEE; /* 241, 250, 238 */
-  --light-blue: #A8DADC; /* 168, 218, 220 */
-  --blue: #457B9D; /* 69, 123, 157 */
-  --dark-blue: #1D3557; /* 69, 123, 157 */
-}
-
 .container {
   display: flex;
   align-items: center;
