@@ -4,6 +4,8 @@ import { useParams } from 'react-router';
 import { fetchMealById, handleDetails, handleIngredients, handleRecipes } from '../state/actions/index'
 import NavBar from '../components/utils/NavBar'
 import styles from '../assets/css/MealPage.module.css';
+import arrowUp from '../assets/img/arrow-up.png';
+import arrowDown from '../assets/img/arrow-down-2.png';
 
 const Meal = () => {
   const dispatch = useDispatch();
@@ -45,7 +47,7 @@ const Meal = () => {
         <div className={styles.overlayBtns}>
           <button type="button" onClick={handleOpenRecipes}>Recipe</button>
           <button type="button" onClick={handleOpenIngredients}>Ingredients</button>
-          <button type="button" onClick={handleOpenDetails}><img src="." alt="Hide" /></button>
+          <button type="button" onClick={handleOpenDetails}><img src={details.recipe || details.ingredients ? arrowDown : arrowUp} alt="Hide" /></button>
         </div>
         {details.recipe ?
           <div className={styles.recipe}>
@@ -54,13 +56,12 @@ const Meal = () => {
         }
         {details.ingredients ?
           <div className={styles.recipe}>
-            <ul>
+            <ul style={{ paddingLeft: '40px' }}>
               {filteredIngredients.map(element => (
-                  <li>{element[1]}</li>
+                  element[1] ? <li>{element[1]}</li> : null
                 ))
               }
             </ul>
-
           </div> : null
         }
       </div>
