@@ -5,6 +5,7 @@ import { fetchMealsByCategory } from '../state/actions';
 import MealCard from '../components/meal/MealCard';
 import NavBar from '../components/utils/NavBar'
 import SearchBar from '../components/search/SearchBar';
+import Loading from '../components/utils/Loading';
 
 const CategoryMeals = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const CategoryMeals = () => {
   
   const renderMeals = () => {
     if (state.loading) {
-      return <h1>Loading...</h1>
+      return <Loading />
     }
     return state.data.meals.map((meal) => <MealCard key={meal.idMeal} id={meal.idMeal} meal={meal.strMeal} image={meal.strMealThumb}/>)
   }

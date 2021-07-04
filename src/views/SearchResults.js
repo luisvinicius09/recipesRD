@@ -4,6 +4,7 @@ import { fetchMealsBySearch } from '../state/actions';
 import NavBar from '../components/utils/NavBar';
 import SearchBar from '../components/search/SearchBar';
 import MealCard from '../components/meal/MealCard';
+import Loading from '../components/utils/Loading';
 
 const SearchResults = (props) => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const SearchResults = (props) => {
 
   const renderMeals = () => {
     if (state.loading) {
-      return <h1>Loading...</h1>
+      return <Loading />
     }
     if (!state.data.results) {
       return <h1>No items to display</h1>
@@ -27,7 +28,6 @@ const SearchResults = (props) => {
     <>
       <NavBar />
       <SearchBar />
-      <h1>Hello Results</h1>
       { renderMeals() }
     </>
   );

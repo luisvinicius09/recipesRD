@@ -6,6 +6,7 @@ import NavBar from '../components/utils/NavBar'
 import styles from '../assets/css/MealPage.module.css';
 import arrowUp from '../assets/img/arrow-up.png';
 import arrowDown from '../assets/img/arrow-down-2.png';
+import Loading from '../components/utils/Loading';
 
 const Meal = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const Meal = () => {
   const meal = state.meal[0];
 
   if (!meal) {
-    return <h1>Loading...</h1>;
+    return <Loading />
   }
 
   const handleOpenRecipes = () => {
@@ -39,7 +40,7 @@ const Meal = () => {
 
   return (
     <>
-      <NavBar displaySearch={true} />
+      <NavBar displaySearch={false} />
       <div className={styles.container}>
         <img src={ meal.strMealThumb } alt={ meal.strMeal }/>
       </div>
@@ -58,7 +59,7 @@ const Meal = () => {
           <div className={styles.recipe}>
             <ul style={{ paddingLeft: '40px' }}>
               {filteredIngredients.map(element => (
-                  element[1] ? <li>{element[1]}</li> : null
+                  element[1] ? <li key={element[1]}>{element[1]}</li> : null
                 ))
               }
             </ul>

@@ -4,6 +4,7 @@ import { fetchFilteredMeals } from '../state/actions';
 import SearchBar from '../components/search/SearchBar';
 import NavBar from '../components/utils/NavBar';
 import MealCard from '../components/meal/MealCard';
+import Loading from '../components/utils/Loading';
 
 const FilterResults = (props) => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const FilterResults = (props) => {
   
   const renderMeals = () => {
     if (state.loading) {
-      return <h1>Loading...</h1>
+      return <Loading />
     }
     if (!state.data.filteredMeals) {
       return <h1>No items to display</h1>
@@ -27,7 +28,6 @@ const FilterResults = (props) => {
     <>
       <NavBar />
       <SearchBar />
-      <h1>Hello Filter Results</h1>
       { renderMeals() }
     </>
   )

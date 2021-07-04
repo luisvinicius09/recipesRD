@@ -5,6 +5,7 @@ import CategoryCard from '../components/category/CategoryCard';
 import NavBar from '../components/utils/NavBar';
 import SearchBar from '../components/search/SearchBar';
 import Filter from '../components/filter/Filter';
+import Loading from '../components/utils/Loading';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Home = () => {
 
   const renderCategories = () => {
     if (state.loading) {
-      return <h2>Loading...</h2>;
+      return <Loading />;
     }
     return state.data.categories.map((cat) => <CategoryCard key={cat.idCategory} category={cat.strCategory} image={cat.strCategoryThumb} amount='1' />);
   }
