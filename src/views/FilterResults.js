@@ -5,6 +5,7 @@ import SearchBar from '../components/search/SearchBar';
 import NavBar from '../components/utils/NavBar';
 import MealCard from '../components/meal/MealCard';
 import Loading from '../components/utils/Loading';
+import sharedStyle from '../assets/css/shared.module.css';
 
 const FilterResults = (props) => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const FilterResults = (props) => {
     <>
       <NavBar />
       <SearchBar />
-      <div>
+      <div className={sharedStyle.container}>
         { renderMeals() }
       </div>
     </>

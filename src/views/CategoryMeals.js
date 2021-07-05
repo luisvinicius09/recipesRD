@@ -6,6 +6,7 @@ import MealCard from '../components/meal/MealCard';
 import NavBar from '../components/utils/NavBar'
 import SearchBar from '../components/search/SearchBar';
 import Loading from '../components/utils/Loading';
+import sharedStyle from '../assets/css/shared.module.css';
 
 const CategoryMeals = () => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ const CategoryMeals = () => {
     <>
       <NavBar />
       <SearchBar />
-      <div>
+      <div className={sharedStyle.container}>
         { renderMeals() }
       </div>
     </>

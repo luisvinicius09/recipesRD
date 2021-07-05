@@ -5,6 +5,7 @@ import CategoryCard from '../components/category/CategoryCard';
 import NavBar from '../components/utils/NavBar';
 import SearchBar from '../components/search/SearchBar';
 import Loading from '../components/utils/Loading';
+import sharedStyle from '../assets/css/shared.module.css';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,9 @@ const Home = () => {
     <>
       <NavBar displaySearch={false}/>
       <SearchBar />
-      { renderCategories() }
+      <div className={sharedStyle.container}>
+        { renderCategories() }
+      </div>
     </>
   );
 };
