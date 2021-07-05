@@ -4,7 +4,6 @@ import { fetchCategories } from '../state/actions';
 import CategoryCard from '../components/category/CategoryCard';
 import NavBar from '../components/utils/NavBar';
 import SearchBar from '../components/search/SearchBar';
-import Filter from '../components/filter/Filter';
 import Loading from '../components/utils/Loading';
 
 const Home = () => {
@@ -26,7 +25,6 @@ const Home = () => {
     <>
       <NavBar displaySearch={false}/>
       <SearchBar />
-      <Filter />
       { renderCategories() }
     </>
   );

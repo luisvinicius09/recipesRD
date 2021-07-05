@@ -10,7 +10,7 @@ const Filter = () => {
   const ref = useRef();
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  useOnClickOutside(ref, () => dispatch(handleModal(false)));
+  // useOnClickOutside(ref, () => dispatch(handleModal(false)));
 
   useEffect(() => {
     dispatch(fetchFilterOptions());
@@ -35,17 +35,27 @@ const Filter = () => {
     dispatch(setFilter(e.target.value))
   };
 
+  const handleModalClose = () => {
+    dispatch(handleModal(false));
+  }
+
   const { checked } = state.filter;
   return (
     <>{state.modal.boolean ?
       <div className={styles.modalContainer}>
-        <div ref={ref} className={styles.modalContent}>
-          <h1>Hello Filter</h1>
-          <input onChange={handleInput}/>
-          <div onChange={handleIngredient} style={{"overflowY": "scroll", "height": "100px"}}>
-            {renderOptions()}
+        <div
+          className={styles.closeModalContainer}
+          onClick={ handleModalClose }
+        />
+        <div className={styles.filter}>
+          <div className={styles.modalContent}>
+            <h1>Filter your ingredient</h1>
+            <input onChange={handleInput}/>
+            <div onChange={handleIngredient} style={{"overflowY": "auto", "height": "100px"}}>
+              {renderOptions()}
+            </div>
+            <Link to={{pathname: "/filter/results", checked}}>Filter</Link>
           </div>
-          <Link to={{pathname: "/filter/results", checked}}>Filter</Link>
         </div>
       </div> : <></>
     }</>
