@@ -1,5 +1,5 @@
 const initialState = {
-  value: ''
+  value: '',
 };
 
 const searchReducer = (state = initialState, action) => {
@@ -7,11 +7,11 @@ const searchReducer = (state = initialState, action) => {
     case 'SET_SEARCH_VALUE':
       return {
         ...state,
-        value: action.value
-      }
+        value: action.value,
+      };
     default:
       return state;
   }
-}
+};
 
 export default searchReducer;

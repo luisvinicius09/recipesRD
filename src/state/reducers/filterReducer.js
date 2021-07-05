@@ -1,6 +1,6 @@
 const initialState = {
   filter: '',
-  checked: ''
+  checked: '',
 };
 
 const filterReducer = (state = initialState, action) => {
@@ -8,16 +8,16 @@ const filterReducer = (state = initialState, action) => {
     case 'SET_FILTER':
       return {
         ...state,
-        filter: action.value
-      }
+        filter: action.value,
+      };
     case 'SET_CHECKED_FILTER':
       return {
         ...state,
-        checked: action.value
-      }
+        checked: action.value,
+      };
     default:
       return state;
   }
-}
+};
 
-export default filterReducer
+export default filterReducer;

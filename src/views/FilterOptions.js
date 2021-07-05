@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFilterOptions, setFilter, setFilteredOptions } from '../state/actions';
 import Loading from '../components/utils/Loading';
@@ -15,39 +15,38 @@ const FilterOptions = () => {
   }, [dispatch]);
 
   const handleInput = (e) => {
-    dispatch(setFilteredOptions(e.target.value))
+    dispatch(setFilteredOptions(e.target.value));
   };
 
   const clearFilter = () => {
-    dispatch(setFilteredOptions(''))
-  }
+    dispatch(setFilteredOptions(''));
+  };
 
   const renderOptions = () => {
     if (state.loading) {
-      return <Loading />
+      return <Loading />;
     }
     const { filter } = state.filter;
     return state.data.filterOptions
-            .filter((ingredient) => filter === '' || ingredient.strIngredient.toLowerCase().includes(filter)|| ingredient.strIngredient.includes(filter)) 
-            .map((filter) => <Input key={filter.idIngredient} ingredient={filter.strIngredient}/>
-          )
+      .filter((ingredient) => filter === '' || ingredient.strIngredient.toLowerCase().includes(filter) || ingredient.strIngredient.includes(filter))
+      .map((filter) => <Input key={filter.idIngredient} ingredient={filter.strIngredient} />);
   };
 
   const handleIngredient = (e) => {
-    dispatch(setFilter(e.target.value))
+    dispatch(setFilter(e.target.value));
   };
 
   return (
     <div className={styles.container}>
       <NavBar />
-      <input onChange={handleInput} placeholder="Filter ingredient" className={styles.searchFilterBar} onFocus={clearFilter}/>
+      <input onChange={handleInput} placeholder="Filter ingredient" className={styles.searchFilterBar} onFocus={clearFilter} />
       <div>
         <div onChange={handleIngredient} className={styles.optionsContainer}>
           {renderOptions()}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default FilterOptions;

@@ -19,12 +19,12 @@ const Home = () => {
     if (state.loading) {
       return <Loading />;
     }
-    return state.data.categories.map((cat) => <CategoryCard key={cat.idCategory} category={cat.strCategory} image={cat.strCategoryThumb} amount='1' />);
-  }
+    return state.data.categories.map((cat) => <CategoryCard key={cat.idCategory} category={cat.strCategory} image={cat.strCategoryThumb} amount="1" />);
+  };
 
   return (
     <>
-      <NavBar displaySearch={false}/>
+      <NavBar displaySearch={false} />
       <SearchBar />
       <div className={sharedStyle.container}>
         { renderCategories() }

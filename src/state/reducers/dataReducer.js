@@ -7,7 +7,7 @@ const initialState = {
   filteredMeals: [],
   loading: false,
   error: null,
-}
+};
 
 const dataReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -28,7 +28,7 @@ const dataReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         meals: action.payload,
-      }
+      };
     case 'FETCH_MEAL_SUCCESS':
       return {
         ...state,
@@ -45,23 +45,23 @@ const dataReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        filteredMeals: action.payload
-      }
+        filteredMeals: action.payload,
+      };
     case 'FETCH_FILTER_SUCCESS':
       return {
         ...state,
         loading: false,
         filterOptions: action.payload,
-      }
+      };
     case 'FETCH_ERROR':
       return {
         ...state,
         loading: false,
-        error: action.error
+        error: action.error,
       };
     default:
       return state;
   }
-}
+};
 
 export default dataReducer;

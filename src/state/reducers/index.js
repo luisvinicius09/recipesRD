@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import dataReducer from '../reducers/dataReducer';
+import dataReducer from './dataReducer';
 import filterReducer from './filterReducer';
 import searchReducer from './searchReducer';
 import modalReducer from './modalReducer';

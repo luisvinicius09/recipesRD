@@ -13,16 +13,18 @@ const SearchBar = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log('working');
-  }
+    if (e.key === 'Enter') {
+      dispatch(setSearch(e.target.value));
+    }
+  };
 
   const { value } = state.search;
 
   return (
     <div className={styles.container}>
-      <input className={styles.searchInput} onChange={ handleInputChange } onKeyDown={(e) => handleSubmit(e)} placeholder="Search recipe"/>
-      <Link to={{ pathname: "/search/results", inputValue: value }} className={styles.submitButton}>
-        <img src={RightArrow} alt="Submit"/>
+      <input className={styles.searchInput} onChange={handleInputChange} onKeyDown={(e) => handleSubmit(e)} placeholder="Search recipe" />
+      <Link to={{ pathname: '/search/results', inputValue: value }} className={styles.submitButton}>
+        <img src={RightArrow} alt="Submit" />
       </Link>
       <br />
     </div>

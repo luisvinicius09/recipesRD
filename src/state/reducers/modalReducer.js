@@ -7,10 +7,10 @@ const modalReducer = (state = initialState, action) => {
     case 'HANDLE_MODAL':
       return {
         boolean: action.boolean,
-      }
+      };
     default:
       return state;
   }
-}
+};
 
 export default modalReducer;
