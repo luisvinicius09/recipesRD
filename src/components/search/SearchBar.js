@@ -20,7 +20,7 @@ const SearchBar = () => {
 
   return (
     <div className={styles.container}>
-      <input className={styles.searchInput} onChange={ handleInputChange } onKeyDown={(e) => handleSubmit(e)}/>
+      <input className={styles.searchInput} onChange={ handleInputChange } onKeyDown={(e) => handleSubmit(e)} placeholder="Search recipe"/>
       <Link to={{ pathname: "/search/results", inputValue: value }} className={styles.submitButton}>
         <img src={RightArrow} alt="Submit"/>
       </Link>
