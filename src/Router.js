@@ -5,6 +5,7 @@ import NoMatch from './views/NoMatch';
 import CategoryMeals from './views/CategoryMeals';
 import Meal from './views/Meal';
 import SearchResults from './views/SearchResults';
+import FilterOptions from './views/FilterOptions';
 import FilterResults from './views/FilterResults';
 
 const Routes = () => (
@@ -17,6 +18,7 @@ const Routes = () => (
       <Route exact path="/categories/:category" component={CategoryMeals}/>
       <Route exact path="/meals/:id" component={Meal}/>
       <Route exact path="/search/results" component={SearchResults}/>
+      <Route exact path="/filter" component={FilterOptions}/>
       <Route exact path="/filter/results" component={FilterResults}/>
       <Route path="*">
         <NoMatch />
