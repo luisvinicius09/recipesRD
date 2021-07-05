@@ -28,7 +28,9 @@ const FilterResults = (props) => {
     <>
       <NavBar />
       <SearchBar />
-      { renderMeals() }
+      <div>
+        { renderMeals() }
+      </div>
     </>
   )
 };

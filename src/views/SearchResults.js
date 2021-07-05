@@ -28,7 +28,9 @@ const SearchResults = (props) => {
     <>
       <NavBar />
       <SearchBar />
-      { renderMeals() }
+      <div>
+        { renderMeals() }
+      </div>
     </>
   );
 };

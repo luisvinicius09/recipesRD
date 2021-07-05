@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFilterOptions, setFilter, setFilteredOptions } from '../state/actions';
-import { Link } from 'react-router-dom';
+import Loading from '../components/utils/Loading';
 import NavBar from '../components/utils/NavBar';
 import Input from '../components/filter/Input';
 import styles from '../assets/css/FilterOptions.module.css';
@@ -24,7 +24,7 @@ const FilterOptions = () => {
 
   const renderOptions = () => {
     if (state.loading) {
-      return <h1>Loading...</h1>
+      return <Loading />
     }
     const { filter } = state.filter;
     return state.data.filterOptions
@@ -40,7 +40,7 @@ const FilterOptions = () => {
   return (
     <div className={styles.container}>
       <NavBar />
-      <input onChange={handleInput} placeholder="Filter ingredient" className={styles.searchFilterBar} />
+      <input onChange={handleInput} placeholder="Filter ingredient" className={styles.searchFilterBar} onFocus={clearFilter}/>
       <div>
         <div onChange={handleIngredient} className={styles.optionsContainer}>
           {renderOptions()}

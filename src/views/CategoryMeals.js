@@ -27,7 +27,9 @@ const CategoryMeals = () => {
     <>
       <NavBar />
       <SearchBar />
-      { renderMeals() }
+      <div>
+        { renderMeals() }
+      </div>
     </>
   )
 };
