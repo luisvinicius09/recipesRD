@@ -1,28 +1,23 @@
 .modalContainer {
-  /* position: absolute; */
   z-index: 2;
 }
 
 .closeModalContainer {
   position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100%;
 }
 
 .filter {
-  /* display: block; */
   position: absolute;
-  z-index: 3;
-  /* left: 0; */
-  /* top: 0; */
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0, 0.4);
-  font-family: 'Roboto';
+  font-family: 'Roboto', monospace;
   z-index: 1;
 }
 
@@ -33,4 +28,3 @@
   border: 1px solid #888;
   width: 80%;
 }
-

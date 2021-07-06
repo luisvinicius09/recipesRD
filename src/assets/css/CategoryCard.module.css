@@ -35,10 +35,9 @@
   font-weight: bold;
 }
 
-.container:after {
+.container::after {
   content: "";
   background-color: var(--red);
   width: 100%;
   height: 6px;
 }
-

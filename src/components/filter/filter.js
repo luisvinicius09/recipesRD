@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {
@@ -6,10 +8,10 @@ import {
 } from '../../state/actions';
 import Input from './Input';
 import styles from '../../assets/css/Filter.module.css';
-import useOnClickOutside from '../../hooks/ClickOutside';
+// import useOnClickOutside from '../../hooks/ClickOutside';
 
 const Filter = () => {
-  const ref = useRef();
+  // const ref = useRef();
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   // useOnClickOutside(ref, () => dispatch(handleModal(false)));

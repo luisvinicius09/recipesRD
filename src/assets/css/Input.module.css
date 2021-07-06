@@ -6,8 +6,8 @@
   border: 1px solid var(--blue);
   cursor: pointer;
   word-wrap: break-word;
-  margin: 0px 5px 5px 5px;
-  font-family: 'Roboto';
+  margin: 0 5px 5px 5px;
+  font-family: 'Roboto', monospace;
   font-size: 15px;
   padding: 2px;
   border-radius: 8px;

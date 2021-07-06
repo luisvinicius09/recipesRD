@@ -1,13 +1,17 @@
 :root {
-  --red:#E63946; /* 230, 57, 70 */
-  --cream: #F1FAEE; /* 241, 250, 238 */
-  --light-blue: #A8DADC; /* 168, 218, 220 */
-  --blue: #457B9D; /* 69, 123, 157 */
-  --dark-blue: #1D3557; /* 69, 123, 157 */
+  --red:#e63946; /* 230, 57, 70 */
+  --cream: #f1faee; /* 241, 250, 238 */
+  --light-blue: #a8dadc; /* 168, 218, 220 */
+  --blue: #457b9d; /* 69, 123, 157 */
+  --dark-blue: #1d3557; /* 69, 123, 157 */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 
+    source-code-pro,
+    Menlo, Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 }
 
@@ -20,6 +24,6 @@ body {
   background-color: var(--cream);
 }
 
-#root{
+#root {
   height: 100%;
 }

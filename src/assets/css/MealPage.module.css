@@ -17,7 +17,7 @@ body {
 .overlay {
   position: absolute;
   width: 100%;
-  bottom: 0px;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px 10px 0 0;
   padding-top: 20px;
@@ -27,7 +27,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin-bottom: 15px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', monospace;
 }
 
 .overlayBtns button {
@@ -51,6 +51,6 @@ body {
   height: 300px;
   color: white;
   padding: 15px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', monospace;
   letter-spacing: 2px;
 }
