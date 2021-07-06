@@ -1,5 +1,9 @@
-// import React from 'react';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 
-// import NoMatch from '../../views/NoMatch';
+import NoMatch from '../../views/NoMatch';
 
-it.todo('');
+it('should display a no match warning', () => {
+  render(<NoMatch />);
+  expect(screen.getByTestId('no_match_warning')).toContainHTML();
+});
