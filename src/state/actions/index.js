@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const fetchCategories = () => async (dispatch) => {
+export const fetchCategories = (service = axios) => async (dispatch) => {
   dispatch({ type: 'FETCH_REQUEST' });
 
   try {
-    const res = await axios.get('https://themealdb.com/api/json/v1/1/categories.php');
+    const res = await service.get('https://themealdb.com/api/json/v1/1/categories.php');
 
     dispatch({ type: 'FETCH_CATEGORIES_SUCCESS', payload: res.data.categories });
   } catch (error) {
@@ -12,10 +12,10 @@ export const fetchCategories = () => async (dispatch) => {
   }
 };
 
-export const fetchMealsByCategory = (category) => async (dispatch) => {
+export const fetchMealsByCategory = (category, service = axios) => async (dispatch) => {
   dispatch({ type: 'FETCH_REQUEST' });
   try {
-    const res = await axios.get(`https://themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+    const res = await service.get(`https://themealdb.com/api/json/v1/1/filter.php?c=${category}`);
 
     dispatch({ type: 'FETCH_MEALS_SUCCESS', payload: res.data.meals });
   } catch (error) {
@@ -23,10 +23,10 @@ export const fetchMealsByCategory = (category) => async (dispatch) => {
   }
 };
 
-export const fetchMealById = (id) => async (dispatch) => {
+export const fetchMealById = (id, service = axios) => async (dispatch) => {
   dispatch({ type: 'FETCH_REQUEST' });
   try {
-    const res = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+    const res = await service.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
 
     dispatch({ type: 'FETCH_MEAL_SUCCESS', payload: res.data.meals });
   } catch (error) {
@@ -34,10 +34,10 @@ export const fetchMealById = (id) => async (dispatch) => {
   }
 };
 
-export const fetchMealsBySearch = (query) => async (dispatch) => {
+export const fetchMealsBySearch = (query, service = axios) => async (dispatch) => {
   dispatch({ type: 'FETCH_REQUEST' });
   try {
-    const res = await axios.get(`https://themealdb.com/api/json/v1/1/search.php?s=${query}`);
+    const res = await service.get(`https://themealdb.com/api/json/v1/1/search.php?s=${query}`);
 
     dispatch({ type: 'FETCH_SEARCH_SUCCESS', payload: res.data.meals });
   } catch (error) {
@@ -45,10 +45,10 @@ export const fetchMealsBySearch = (query) => async (dispatch) => {
   }
 };
 
-export const fetchFilterOptions = () => async (dispatch) => {
+export const fetchFilterOptions = (service = axios) => async (dispatch) => {
   dispatch({ type: 'FETCH REQUEST' });
   try {
-    const res = await axios.get('https://themealdb.com/api/json/v1/1/list.php?i=list');
+    const res = await service.get('https://themealdb.com/api/json/v1/1/list.php?i=list');
 
     dispatch({ type: 'FETCH_FILTER_SUCCESS', payload: res.data.meals });
   } catch (error) {
@@ -56,10 +56,10 @@ export const fetchFilterOptions = () => async (dispatch) => {
   }
 };
 
-export const fetchFilteredMeals = (query) => async (dispatch) => {
+export const fetchFilteredMeals = (query, service = axios) => async (dispatch) => {
   dispatch({ type: 'FETCH_REQUEST' });
   try {
-    const res = await axios.get(`https://themealdb.com/api/json/v1/1/filter.php?i=${query}`);
+    const res = await service.get(`https://themealdb.com/api/json/v1/1/filter.php?i=${query}`);
 
     dispatch({ type: 'FETCH_FILTERED_MEALS', payload: res.data.meals });
   } catch (error) {
