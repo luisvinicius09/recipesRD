@@ -1,0 +1,30 @@
+:root {
+  --red: #e63946; /* 230, 57, 70 */
+  --cream: #f1faee; /* 241, 250, 238 */
+  --light-blue: #a8dadc; /* 168, 218, 220 */
+  --blue: #457b9d; /* 69, 123, 157 */
+  --dark-blue: #1d3557; /* 69, 123, 157 */
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+#root {
+  height: 100%;
+}

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.searchInput {
+  width: 80%;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  padding-left: 8px;
+}
+
+.searchInput:active,
+.searchInput:focus {
+  border: 2px solid var(--blue);
+  outline: none;
+}
+
+.submitButton img {
+  width: 25px;
+  height: auto;
+  padding-top: 4px;
+}

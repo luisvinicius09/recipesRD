@@ -7,52 +7,64 @@
 </h1>
 
 <h4 align="center">
-  One paragraph statement about the project.
+  RecipesRD is here for you, filtering every recipe based on what you have in your kitchen. 
 </h4>
 
 <p align="center">
-  <img src="./app_screenshot.png">
+  <img src="./ss_app.png">
 </p>
   
 Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React
+- Redux
+- Axios
+- [External API](themealdb.com)
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://recipesrd.netlify.app)
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Code Editor.
+- Browser
+- Node.js installed.
+- React knowledge.
+
 ### Setup
+
+- First things is to download the repository files or to clone it.
 
 ### Install
 
+- Install all the dependencies running `npm install` on your terminal.
+
 ### Usage
+
+- Run `npm start` and open `http://localhost:3000` on the browser.
 
 ### Run tests
 
+- Run `npm run test`
+
 ### Deployment
+
+- Deployed on [Netfily](https://www.netlify.com)
 
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/luisvinicius09/recipesRD/issues).
 
 ## Show your support
 
@@ -73,29 +85,12 @@ This project is [MIT](lic.url) licensed.
 </h2>
 
 <p align="center">
-  <strong>Author1 👤</strong>  
+  <strong>Luis Vinicius M. Santos 👤</strong>  
 </p>
 
 <p align="center">
-  GitHub: <a href="https://github.com/githubhandle">@githubhandle</a>
+  GitHub: <a href="https://github.com/luisvinicius09">@githubhandle</a>
 </p>
 <p align="center">
-  Twitter: <a href="https://twitter.com/twitterhandle">@twitterhandle</a>  
-</p>
-<p align="center">
-  LinkedIn: <a href="https://linkedin.com/linkedinhandle">LinkedIn</a>
-</p>
-
-<p align="center">
-  <strong>Author2 👤</strong>  
-</p>
-
-<p align="center">
-  GitHub: <a href="https://github.com/githubhandle">@githubhandle</a>
-</p>
-<p align="center">
-  Twitter: <a href="https://twitter.com/twitterhandle">@twitterhandle</a>  
-</p>
-<p align="center">
-  LinkedIn: <a href="https://linkedin.com/linkedinhandle">LinkedIn</a>
+  LinkedIn: <a href="https://www.linkedin.com/in/luis-vinicius/">LinkedIn</a>
 </p>

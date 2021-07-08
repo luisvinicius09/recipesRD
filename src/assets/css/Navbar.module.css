@@ -1,0 +1,43 @@
+.container {
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+.engineBtn {
+  background: none;
+  border: none;
+}
+
+.engineBtn:hover {
+  cursor: pointer;
+}
+
+.displaySearch {
+  background: none;
+  border: none;
+}
+
+.displaySearch img,
+.engineBtn img {
+  width: 25px;
+  height: auto;
+}
+
+.displaySearch:hover {
+  cursor: pointer;
+}
+
+.hiddenDiv {
+  visibility: hidden;
+  width: 25px;
+  height: auto;
+}

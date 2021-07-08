@@ -1,0 +1,21 @@
+.optionsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.searchFilterBar {
+  display: block;
+  width: 80%;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  padding-left: 8px;
+  margin: 10px auto 10px auto;
+}
+
+.searchFilterBar:active,
+.searchFilterBar:focus {
+  border: 2px solid var(--blue);
+  outline: none;
+}
