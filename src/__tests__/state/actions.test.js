@@ -88,6 +88,24 @@ describe('should retrieve data and insert on the data state', () => {
       })
       .catch((err) => err);
   });
+
+  it('should return a error', () => {
+    store.dispatch(importedActions.fetchCategories('error'))
+      .then(() => {
+        const actions = store.getActions();
+        expect(actions.type).toEqual('FETCH_ERROR');
+      })
+      .catch((err) => err);
+  });
+
+  it('should return a the dispatch request', () => {
+    store.dispatch(importedActions.fetchCategories())
+      .then(() => {
+        const actions = store.getActions();
+        expect(actions[0].type).toEqual('FETCH_REQUEST');
+      })
+      .catch((err) => err);
+  });
 });
 
 const initialSearchState = {
