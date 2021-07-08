@@ -1,0 +1,56 @@
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  margin-top: 10px;
+  height: calc(100% - (66px));
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px 10px 0 0;
+  padding-top: 20px;
+}
+
+.overlayBtns {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  font-family: 'Roboto', monospace;
+}
+
+.overlayBtns button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.overlayBtns button:focus {
+  outline: none;
+  border: none;
+}
+
+.overlayBtns img {
+  width: 20px;
+  height: auto;
+}
+
+.recipe {
+  overflow-y: scroll;
+  height: 300px;
+  color: white;
+  padding: 15px;
+  font-family: 'Roboto', monospace;
+  letter-spacing: 2px;
+}

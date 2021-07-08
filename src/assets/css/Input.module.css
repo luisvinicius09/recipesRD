@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  width: 90px;
+  min-height: 50px;
+  text-align: center;
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  word-wrap: break-word;
+  margin: 0 5px 5px 5px;
+  font-family: 'Roboto', monospace;
+  font-size: 15px;
+  padding: 2px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.container:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
