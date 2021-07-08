@@ -21,6 +21,7 @@ Additional description about the project and its features.
 - React
 - Redux
 - Axios
+- [External API](themealdb.com)
 
 ## Live Demo
 
